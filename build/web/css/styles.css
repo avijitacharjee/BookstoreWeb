@@ -1,0 +1,170 @@
+.indexBody { 
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    
+    width: 100%;
+    height: 100%;
+}
+.list {
+    align-items: center;
+    margin-left: 200px;
+    font-family: cursive;
+    font-size: 36px;
+    font-style: italic;
+    color: yellow;
+    
+}
+.li {
+    color: gold;
+    background-image: url('../images/listBG.jpg');
+   
+    backface-visibility: visible;
+}
+.loginBody {
+    background-image: url("../images/login.jpg");
+    margin: 0px;
+}
+.name {
+    margin: 191px 0px 0px 460px;
+    width: 400px;
+}
+
+.password {
+    margin: 40px 0px 0px 460px;
+    width: 400px;
+}
+.submit {
+    margin-left: 40%;
+}
+.form {
+    border-style: double;
+    border-color: paleturquoise;
+    border-width: 5px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 400px;
+    transform: translate(-50%,-50%);
+    color: #10ead4;
+    margin-top: 50px;
+    font-size: 22px;
+    background-color: rgba(0,0,0,0.5);
+}
+.label {
+    width: 100px;
+}
+p.row {
+    color: rgba(255,255,255,1);
+}
+.A {
+    
+}
+.Hmm {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    font-size: 40px;
+    border-bottom: 6px solid #4CAF50;
+    text-align: center;
+    font-family: cursive;
+    color: #00ff00;
+}
+.text-box {
+    width: 50%;
+    overflow: hidden;
+    font-size: 14px;
+    padding: 5px 0;
+    float: right;
+    border-bottom: 1px solid #4CAF50;
+    color: #d848e2;
+    color:wheat;
+   background-color: rgba(0,0,0,0.5);
+   font-family: cursive;
+}
+.text-box i {
+    width: 26px;
+    float: left;
+    text-align: center;
+}
+
+.indexnav li a:hover {
+    border: 3px solid yellow;
+    color: red;
+    font-weight: 200;
+    font-size: 32px;
+    padding: 4px 7.5px;
+    
+}
+.logo{
+    color: white;
+    float: left;
+    
+}
+.l {
+    font-size: 70px;
+    color: white;
+    font-family: cursive;
+    padding-left: 0px;
+    margin: 0px;
+    
+}
+
+
+
+.indexnav a {
+    color: yellow;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 30px;
+    margin: 0px 0px 0px 30px;
+    border-style: solid;
+    border-color: wheat;
+    
+}
+
+.indexnav li {
+    list-style: none;
+    margin-top: 40px;
+    float: left;
+}
+ul.main-nav{
+    float: left;
+    margin-left: 60%;
+}
+ul.indexnav  {
+    float:left;
+    width: 100%;
+    margin: 0px;
+}
+.header {
+    background-image: url("../images/black-back.jpg");
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+body {
+    margin: 0px;
+}
+li.active {
+    margin-left: 18%;
+}
+li.l {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+table {
+    top:50%;
+    left: 50%;
+    width: 400px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    border-color: rgba(100,100,200,1);
+}
+.aaa{
+    background-color: rgba(00,0,00,0.5);
+    color: white;
+}

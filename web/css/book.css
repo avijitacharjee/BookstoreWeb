@@ -1,0 +1,24 @@
+.bookform {
+    border-style: double;
+    border-color: paleturquoise;
+    border-width: 5px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    width: 400px;
+    transform: translate(-50%,-50%);
+    color: #10ead4;
+    margin-top: 50px;
+    font-size: 22px;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.6);
+    
+}
+
+.bookindexbody {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    
+    width: 100%;
+    height: 150%;
+}
