@@ -13,7 +13,7 @@
     </head>
     <body>
         <form action="../../FileServlet" enctype="multipart/form-data" method="post">
-            <input type="file" name="file" multiple/>
+            <input type="file" name="file" multiple="true"/>
             <input type="submit" />
             </form>
     </body>

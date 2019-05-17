@@ -52,10 +52,10 @@ public class FileServlet extends HttpServlet {
                 ServletFileUpload sf= new ServletFileUpload(new DiskFileItemFactory());
                 out.println(sf);
                 List<FileItem> multifiles=sf.parseRequest(request);
-                out.println("multi"+multifiles);
+                out.println("multi");
                 for(FileItem i: multifiles)
                 {
-                    i.write(new File("G:/"+i.getName()));
+                    i.write(new File("F://new/"+i.getName()));
                 }
                 
                 out.println("file uploaded successfully");
