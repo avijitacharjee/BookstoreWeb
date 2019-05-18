@@ -95,6 +95,8 @@ public class AddBookServlet extends HttpServlet {
                 out.println(e);
             }
             
+            response.sendRedirect("../BoierDokan/jsp/admin/index.jsp");
+            
         } 
     }
     

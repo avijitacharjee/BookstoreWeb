@@ -66,7 +66,7 @@ public class LoginServlet extends HttpServlet {
                 {
                     response.sendRedirect("");
                 }
-                response.sendRedirect("registration.jsp");
+                response.sendRedirect("../../BoierDokan/jsp/user/index.jsp");
             }
 //         
         

@@ -187,5 +187,42 @@ public class DB {
         return p_id;
     }
     
+    public String getCategoryName(int c_id) throws ClassNotFoundException, SQLException
+    {
+        DBConnection db= new DBConnection();
+        Connection con = db.getConnection();
+        
+        String query="select name from category where c_id="+c_id+"";
+        Statement st=con.createStatement();
+        ResultSet rs=st.executeQuery(query);
+        rs.next();
+        String name=rs.getString("name");
+        return name;
+    }
+    
+    public String getAuthorName(int a_id) throws ClassNotFoundException, SQLException
+    {
+        DBConnection db= new DBConnection();
+        Connection con = db.getConnection();
+        
+        String query="select name from author where a_id="+a_id+"";
+        Statement st=con.createStatement();
+        ResultSet rs=st.executeQuery(query);
+        rs.next();
+        return rs.getString("name");
+    }
+    
+    
+    public String getPublisherName(int p_id) throws ClassNotFoundException, SQLException
+    {
+        DBConnection db= new DBConnection();
+        Connection con = db.getConnection();
+        
+        String query="select name from publisher where p_id="+p_id+"";
+        Statement st=con.createStatement();
+        ResultSet rs=st.executeQuery(query);
+        rs.next();
+        return rs.getString("name");
+    }
 
 }
