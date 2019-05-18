@@ -5,9 +5,11 @@
  */
 package servlets;
 
+import DB.DB;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -61,26 +63,33 @@ public class AddBookServlet extends HttpServlet {
         {
             
             try{
-                out.println("hi");
                 category=request.getParameter("category");
-                out.println(category);
                 author=request.getParameter("author");
                 publisher= request.getParameter("publisher");
                 name=request.getParameter("name");
                 edition=Integer.parseInt(request.getParameter("edition"));
                 pages=Integer.parseInt(request.getParameter("pages"));
                 copies=Integer.parseInt(request.getParameter("copies"));
+                details=request.getParameter("details");
                 
-                ServletFileUpload sf= new ServletFileUpload(new DiskFileItemFactory());
-                
-                List<FileItem> multifiles=sf.parseRequest(request);
-                
-                for(FileItem i: multifiles)
+//                ServletFileUpload sf= new ServletFileUpload(new DiskFileItemFactory());
+//                
+//                List<FileItem> multifiles=sf.parseRequest(request);
+//                
+//                for(FileItem i: multifiles)
+//                {
+//                    i.write(new File("F:/new"+i.getName()));
+//                }
+//                
+//                out.println("file uploaded successfully");
+                DB db= new DB();
+                try {
+                    db.insertBook(category, author, publisher, name, edition+"", pages+"", copies+"", "F:/new/", details);
+                }catch(ClassNotFoundException|SQLException e)
                 {
-                    i.write(new File("F:/new"+i.getName()));
+                    out.print("inner exception"+e);
                 }
-                
-                out.println("file uploaded successfully");
+                 
             }catch(Exception e)
             {
                 out.println(e);

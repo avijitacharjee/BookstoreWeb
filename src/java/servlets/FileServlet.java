@@ -55,7 +55,7 @@ public class FileServlet extends HttpServlet {
                 out.println("multi");
                 for(FileItem i: multifiles)
                 {
-                    i.write(new File("F://new/"+i.getName()));
+                    i.write(new File("../..//"+i.getName()));
                 }
                 
                 out.println("file uploaded successfully");

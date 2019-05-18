@@ -82,18 +82,21 @@ public class DB {
         
     }
     
-    public void insertBook(String category,String details) throws ClassNotFoundException, SQLException
+    public void insertBook(String category,String author,String publisher,String name,String edition,String pages,String copies,String imgUrl,String details) throws ClassNotFoundException, SQLException
     {
         DBConnection db= new DBConnection();
         Connection con=db.getConnection();
         
         Statement st=con.createStatement();
-        ResultSet rs=st.executeQuery("Select * from category where c_id='"+category+"';");
-        if(!rs.next())
-        {
-            String query="insert into category(name,details) values('"+category+"','"+details+"')";
-            st.execute(query);
-        }
+        
+        int c_id=getCategoryId(category);
+        int a_id=getAuthorId(author);
+        int p_id=getPublisherId(publisher);
+        
+        String query="insert into book(category,author,publisher,name,edition,pages,copies,img_url,details) values("+c_id+","+a_id+","
+                +p_id+",'"+name+"',"+edition+","+pages+","+copies+",'"+imgUrl+"','"+details+"');";
+       // Statement st=con.createStatement();
+        st.execute(query);
         
     }
     
@@ -143,6 +146,45 @@ public class DB {
             categories.add(rs.getString("name"));
         }
         return categories;
+    }
+    public int getCategoryId(String category) throws ClassNotFoundException, SQLException
+    {
+        DBConnection db= new DBConnection();
+        Connection con = db.getConnection();
+        
+        String query="select c_id from category where name='"+category+"'";
+        Statement st=con.createStatement();
+        ResultSet rs=st.executeQuery(query);
+        rs.next();
+        int c_id=rs.getInt("c_id");
+        return c_id;
+    }
+    
+    public int getAuthorId(String author) throws ClassNotFoundException, SQLException
+    {
+        DBConnection db= new DBConnection();
+        Connection con = db.getConnection();
+        
+        String query="select a_id from author where name='"+author+"'";
+        Statement st=con.createStatement();
+        ResultSet rs=st.executeQuery(query);
+        rs.next();
+        int a_id=rs.getInt("a_id");
+        return a_id;
+    }
+    
+    
+    public int getPublisherId(String publisher) throws ClassNotFoundException, SQLException
+    {
+        DBConnection db= new DBConnection();
+        Connection con = db.getConnection();
+        
+        String query="select p_id from publisher where name='"+publisher+"'";
+        Statement st=con.createStatement();
+        ResultSet rs=st.executeQuery(query);
+        rs.next();
+        int p_id=rs.getInt("p_id");
+        return p_id;
     }
     
 

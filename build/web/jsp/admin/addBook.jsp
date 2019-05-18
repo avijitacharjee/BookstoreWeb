@@ -48,7 +48,7 @@
         <div class="bookindexbody">
             <div class="bookform">
             <h1 class="Hmm">Add Book</h1>
-            <form action="../../AddBookServlet" method="post">
+            <form action="../../AddBookServlet" method="post" >
                  <p class="row"> Category
                      <select name="category" class="text-box">
                          <%
@@ -87,7 +87,7 @@
                 <p class="row"> Copies <input type="number" name="copies" class="text-box"</p>
                
                 <p class="row"> Details <input type="text" name="details" class="text-box"> </p> 
-                 <p class="row"> Image <input type="file" name="image" class="text-box"> </p>
+             <%//    <p class="row"> Image <input type="file" name="image" class="text-box"> </p> %>
                 <p> <input type="submit" class="submit">
                     
             </form> 
